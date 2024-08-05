@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">TeaBot</string>
+    <string name="welcome_to_teabot">Welcome to TeaBot</string>
+    <string name="detect_and_devour_tea_n_leaf_diseases_today">Detect and Devour Tea \n leaf Diseases Today!</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="facebook">Facebook</string>
+    <string name="x_twitter">X(Twitter)</string>
+    <string name="google">Google</string>
+    <string name="register_here">Register here</string>
+    <string name="don_t_have_account">Don\'t have account?</string>
+    <string name="register">Register</string>
+    <string name="username">username</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="Register">Register</string>
+    <string name="already_have_an_account">Already have an Account?</string>
+    <string name="category_n_expored">Category \nExpored</string>
+    <string name="images_nsearched">Images\nSearched</string>
+    <string name="blight">Blight</string>
+    <string name="settings">Settings\n</string>
+    <string name="start_chat">Start Chat</string>
+    <string name="theme">Theme mode</string>
+    <string name="logout">Log out\n</string>
+    <string name="send_message">Send a message</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="add_image">Add image</string>
+    <string name="affected_parts">Affected parts</string>
+    <string name="recent_searches">Recent Searches</string>
+    <string name="aranthracnose">Aranthracnose</string>
+    <string name="blackspot">Blackspot</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="rust">Rust</string>
+    <string name="open_camera">Open Camera</string>
+    <string name="no_photos_found">No photos found</string>
+    <string name="capture_image">Capture Image\n</string>
+    <string name="image_item">Gallery image\n</string>
+
+    <string-array name="languages_array">
+            <item>English</item>
+            <item>Spanish</item>
+            <item>French</item>
+            <item>German</item>
+            <item>Chinese</item>
+    </string-array>
+
+</resources>

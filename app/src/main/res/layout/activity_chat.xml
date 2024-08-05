@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D4D4D4"
+    tools:context=".ChatActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="414dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/chatquit"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/tb_navigate_before_24" />
+
+        <EditText
+            android:id="@+id/Chattitle"
+            android:layout_width="292dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:inputType="text"
+            android:text="Chat"
+            android:textAlignment="center"
+            android:textSize="34sp" />
+
+        <ImageButton
+            android:id="@+id/morechat"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/tb_more_vert_24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="419dp"
+        android:layout_height="595dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <ImageView
+            android:id="@+id/capturedimage"
+            android:layout_width="match_parent"
+            android:layout_height="182dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="20dp"
+            app:srcCompat="@drawable/blackspot" />
+
+        <EditText
+            android:id="@+id/selectqn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="50dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Select\na\nquestion\nbelow\nto\nstart\nthe\nchat." />
+
+        <EditText
+            android:id="@+id/type"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="60dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Or\nyou\ncan\ntype\nyour\nown\nquestion." />
+
+        <EditText
+            android:id="@+id/qn1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/chatqnbg"
+            android:ems="10"
+            android:inputType="text"
+            android:text="What\nis\nthe\ndisease?"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/qn2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/chatqnbg"
+            android:ems="10"
+            android:inputType="text"
+            android:text="What\nis\nthe\ncause\nof\nthe\ndisease?"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/qn3"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/chatqnbg"
+            android:ems="10"
+            android:inputType="text"
+            android:text="What\nare\nthe\npossible\ncuratives?"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chatInput"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/animationbgColor"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/tb_add_circle_outline_24" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/chatqnbg"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/introchat"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:hint="Start\ttyping\there\tto\tstart\tchat..."
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:textColor="@color/animationbgColor" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/tb_send_24" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

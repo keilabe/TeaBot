@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainColor"
+    tools:context=".ChatWindowActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/endColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Chat"
+        app:titleTextColor="@android:color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:listitem="@layout/chat_message_item" />
+
+    <!-- New LinearLayout for predefined questions -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/chatwin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Content of LinearLayout goes here -->
+        <ImageView
+            android:id="@+id/capturedimage"
+            android:layout_width="match_parent"
+            android:layout_height="182dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="20dp"
+            app:srcCompat="@drawable/blackspot" />
+
+        <TextView
+            android:id="@+id/selectqn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="50dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Select\na\nquestion\nbelow\nto\nstart\nthe\nchat."
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="60dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Or\nyou\ncan\ntype\nyour\nown\nquestion."
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/qn1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/chatqnbg"
+            android:ems="10"
+            android:inputType="text"
+            android:paddingTop="5dp"
+            android:text="What\nis\nthe\ndisease?"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/qn2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/chatqnbg"
+            android:ems="10"
+            android:inputType="text"
+            android:paddingTop="5dp"
+            android:text="What\nis\nthe\ncause\nof\nthe\ndisease?"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/qn3"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/chatqnbg"
+            android:ems="10"
+            android:inputType="text"
+            android:paddingTop="5dp"
+            android:text="What\nare\nthe\npossible\ncuratives?"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <!-- ImageView, EditTexts for predefined questions -->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chatwin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/animationbgColor"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/add"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/add_image"
+            android:src="@drawable/baseline_add_circle_outline_24" />
+
+        <EditText
+            android:id="@+id/chattext"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/chatqnbg"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:hint="@string/type_a_message"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@color/animationbgColor" />
+
+        <ImageButton
+            android:id="@+id/sendbut"
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/send_message"
+            android:src="@drawable/baseline_send_24" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

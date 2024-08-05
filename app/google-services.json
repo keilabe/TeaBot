@@ -1,0 +1,37 @@
+{
+  "project_info": {
+    "project_number": "255632192374",
+    "project_id": "teabot-199bd",
+    "storage_bucket": "teabot-199bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255632192374:android:6568c30d56dcf713ff4057",
+        "android_client_info": {
+          "package_name": "com.example.teabot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_7hssbq3tZKadPZFktvGPiIJZ_3_Rj3s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      },
+      "service cloud.firestore": {
+      "match /databases/{database}/documents": {
+      "match /users/{userId}": {
+      "allow read, write": "if request.auth != null;"
+    }
+  }
+  }
+
+  }
+  ],
+  "configuration_version": "1"
+}
